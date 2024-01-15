@@ -1,5 +1,6 @@
 let user_wordHTML = document.getElementById("user_word")
 let button = document.querySelector("button")
+let pHTML = document.querySelector("p")
 
 
 
@@ -8,6 +9,10 @@ button.addEventListener("click", () => {
     let user_word = user_wordHTML.value
     let result = isPalyndrome(user_word)
     console.log(result)
+    if (result)
+        pHTML.innerText = `La parola ${user_word} è palindroma `
+    else pHTML.innerText = `La parola ${user_word} non  è palindroma `
+
 
 
 })

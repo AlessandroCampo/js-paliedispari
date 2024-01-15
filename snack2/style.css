@@ -7,8 +7,12 @@
 
 #myHand {
     transform: rotate(90deg);
+    width: 150px;
+
 }
 
 #pcHand {
     transform: rotate(270deg);
+    width: 150px;
+
 }
