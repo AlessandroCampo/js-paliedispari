@@ -3,19 +3,23 @@ let button = document.querySelector("button")
 
 
 
-let palyCheck = false
+
 button.addEventListener("click", () => {
-
     let user_word = user_wordHTML.value
-    let wordArray = Array.from(user_word)
-    let checkArray = []
+    let result = isPalyndrome(user_word)
+    console.log(result)
 
+
+})
+let palyCheck = false
+
+function isPalyndrome(word) {
+    let wordArray = Array.from(word.toUpperCase())
+    let checkArray = []
     for (let i = wordArray.length - 1; i >= 0; i--) {
         checkArray.push(wordArray[i])
         console.log(checkArray)
     }
-
-
     for (let i = 0; i < wordArray.length; i++) {
         if (wordArray[i] == checkArray[i]) {
             palyCheck = true
@@ -24,13 +28,10 @@ button.addEventListener("click", () => {
         else {
             palyCheck = false
             console.log(wordArray[i], checkArray[i])
-            break
+            return false
         }
     }
-
-    console.log(palyCheck)
-
-
-})
-
-
+    if (palyCheck == true) {
+        return true
+    }
+}

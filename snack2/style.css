@@ -1,0 +1,14 @@
+#hand-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-top: 150px;
+}
+
+#myHand {
+    transform: rotate(90deg);
+}
+
+#pcHand {
+    transform: rotate(270deg);
+}
